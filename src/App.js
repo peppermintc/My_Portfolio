@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+// Images
+import jsicon from './js2.png';
+import githubicon from './githubicon.png';
+import emailicon from './email.png';
+import foldericon from './foldericon.png';
+import noteicon from './noteicon.png';
+// Components
+import MyFile from './components/MyFile';
+import MyTitle from './components/MyTitle';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  
+  render() {
+    return (
+      <div className="App">
+        <MyTitle />
+        <div style={{display:"flex", flexDirection:"row"}}>
+          <MyFile imgsrc={jsicon} iconName={"Hamin Park"} name={"javascript"} />
+          <MyFile imgsrc={foldericon} iconName={"Projects"} name={"folder"} />
+          <MyFile imgsrc={noteicon} iconName={"Skills.txt"} name={"skills"} />
+          <MyFile imgsrc={githubicon} iconName={"Github"} name={"github"} />
+          <MyFile imgsrc={emailicon} iconName={"Email"} name={"email"} />
+        </div>
+      </div>
+    );
+  };
+
 }
 
 export default App;
