@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/my_portfoilio/static/css/main.f7bc5d5b.chunk.css",
+    "main.js": "/my_portfoilio/static/js/main.e692f6d1.chunk.js",
+    "main.js.map": "/my_portfoilio/static/js/main.e692f6d1.chunk.js.map",
+    "runtime-main.js": "/my_portfoilio/static/js/runtime-main.131c358f.js",
+    "runtime-main.js.map": "/my_portfoilio/static/js/runtime-main.131c358f.js.map",
+    "static/js/2.2ca84537.chunk.js": "/my_portfoilio/static/js/2.2ca84537.chunk.js",
+    "static/js/2.2ca84537.chunk.js.map": "/my_portfoilio/static/js/2.2ca84537.chunk.js.map",
+    "index.html": "/my_portfoilio/index.html",
+    "precache-manifest.f093b800e1d526a9c612805798c1fbc7.js": "/my_portfoilio/precache-manifest.f093b800e1d526a9c612805798c1fbc7.js",
+    "service-worker.js": "/my_portfoilio/service-worker.js",
+    "static/css/main.f7bc5d5b.chunk.css.map": "/my_portfoilio/static/css/main.f7bc5d5b.chunk.css.map",
+    "static/media/email.png": "/my_portfoilio/static/media/email.775dfe7f.png",
+    "static/media/js2.png": "/my_portfoilio/static/media/js2.9c5b859f.png",
+    "static/media/noteicon.png": "/my_portfoilio/static/media/noteicon.78f8d7bf.png",
+    "static/media/smalljsicon.png": "/my_portfoilio/static/media/smalljsicon.e56e37de.png",
+    "static/media/smalljsonicon.png": "/my_portfoilio/static/media/smalljsonicon.da006e69.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.131c358f.js",
+    "static/js/2.2ca84537.chunk.js",
+    "static/css/main.f7bc5d5b.chunk.css",
+    "static/js/main.e692f6d1.chunk.js"
+  ]
+}
