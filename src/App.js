@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
 // Images
-import jsicon from './js2.png';
-import githubicon from './githubicon.png';
-import emailicon from './email.png';
-import foldericon from './foldericon.png';
-import noteicon from './noteicon.png';
+import jsicon from './img/js2.png';
+import githubicon from './img/githubicon.png';
+import emailicon from './img/email.png';
+import foldericon from './img/foldericon.png';
+import noteicon from './img/noteicon.png';
 // Components
 import MyFile from './components/MyFile';
 import MyTitle from './components/MyTitle';

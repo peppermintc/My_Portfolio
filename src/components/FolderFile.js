@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import foldericon from '../foldericon.png';
+import foldericon from '../img/foldericon.png';
 
 // Styled Component
 const File = styled.div`

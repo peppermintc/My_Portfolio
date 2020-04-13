@@ -14,8 +14,8 @@ import Draggable from 'react-draggable';
 import MuiAlert from '@material-ui/lab/Alert';
 import Snackbar from '@material-ui/core/Snackbar';
 // Images
-import smalljsicon from '../smalljsicon.png';
-import smalljsonicon from '../smalljsonicon.png';
+import smalljsicon from '../img/smalljsicon.png';
+import smalljsonicon from '../img/smalljsonicon.png';
 // Components
 import FolderFile from './FolderFile';
 
