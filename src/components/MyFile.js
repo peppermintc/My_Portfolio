@@ -1,5 +1,8 @@
+// React
 import React, { Component } from 'react';
-
+// Styled Components
+import styled from 'styled-components'; 
+// Material UI
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -8,21 +11,34 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Paper from '@material-ui/core/Paper';
 import Draggable from 'react-draggable';
-
 import MuiAlert from '@material-ui/lab/Alert';
 import Snackbar from '@material-ui/core/Snackbar';
-
+// Images
 import smalljsicon from '../smalljsicon.png';
 import smalljsonicon from '../smalljsonicon.png';
-
-import Blink from 'react-blink-text';
-
+// Components
 import FolderFile from './FolderFile';
 
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
 
+// Styled Component
+const FileIcon = styled.div`
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 16px;
+
+    &:hover {
+        padding: 15px;
+        border: 1px solid rgb(160, 160, 160);
+        background: rgb(61, 63, 66);
+        cursor: pointer;
+    }
+`;
+
+// Material UI : Snackbar Message
+function Alert(props) {
+    return <MuiAlert variant="filled" {...props} />;
+}
+// Material UI : Dialog (Draggable)
 function PaperComponent(props) {
   return (
     <Draggable handle="#draggable-dialog-title" cancel={'[class*="MuiDialogContent-root"]'}>
@@ -31,39 +47,35 @@ function PaperComponent(props) {
   );
 }
 
+// Component: <MyFile/>
 class MyFile extends Component {
   constructor(props) {
     super(props)
+    // States
     this.state = {
-      hover: false,
-      open: false,
-      jsopen: false,
-      folderopen: false,
-      snackbaropen:false,
-      snackbarmsg: "Email address has been copied to your clipboard 😀"
+        jsopen: false,
+        folderopen: false,
+        txtopen: false,
+        snackbaropen: false,
+        snackbarmsg: "Email address has been copied to your clipboard 😀"
     }
   }
 
-  snackbarClose = (event) => {
-      this.setState({snackbaropen: false});
-  }
-  
-  toggleHover = () => {
-    this.setState({hover: !this.state.hover})
-  }
-
-  handleToggle = () => {
-    this.setState({open: !this.state.open})
-  }
-
+  // Material UI ON/OFF Methods
   jsToggle = () => {
     this.setState({jsopen: !this.state.jsopen})
   }
-
   folderToggle = () => {
     this.setState({folderopen: !this.state.folderopen})
   }
+  txtToggle = () => {
+    this.setState({txtopen: !this.state.txtopen})
+  }
+  snackbarClose = (event) => {
+    this.setState({snackbaropen: false});
+  }  
   
+  // onClick Handler
   handleClick = () => {
     if(this.props.iconName === "Hamin Park") {
         this.jsToggle();
@@ -72,12 +84,13 @@ class MyFile extends Component {
         this.folderToggle();
     }
     if(this.props.iconName === "Skills.txt") {
-        this.handleToggle();
+        this.txtToggle();
     }
     if(this.props.iconName === "Github") {
         window.open("https://github.com/peppermintc","_blank");
     }
     if(this.props.iconName === "Email") {
+        // Copying email to clipboard
         let textToCopy = "haminjp@naver.com";
         let dummy = document.createElement("textarea");
         document.body.appendChild(dummy);
@@ -88,33 +101,21 @@ class MyFile extends Component {
         this.setState({snackbaropen: true});
     }
   }
- 
+  
+  // Render
   render() {
-    
-    const { open } = this.state
-
-    var style1;
-    if (this.state.hover) {
-      style1 = { marginRight: "10px", marginLeft:"10px", padding: "15px", border: "1px solid rgb(160, 160, 160)", background: "rgb(61, 63, 66)", cursor: "pointer" }
-    } else {
-      style1 = { marginRight: "10px", marginLeft:"10px", padding: "16px" }
-    }
-
     return (
         <div>
-            <div
-                onClick={this.handleClick} 
-                onMouseEnter={this.toggleHover}
-                onMouseLeave={this.toggleHover}
-                style={style1}
-            >
+            {/* File Appearance */}
+            <FileIcon onClick={() => this.handleClick()}>
                 <img src={this.props.imgsrc} style={{ height: "96px", width: "96px", marginBottom: "7px", marginLeft: "auto", marginRight: "auto", display: "block" }} alt="jsicon"/>
                 <div style={{ fontSize: "18px", textAlign: "center" }}>{this.props.iconName}</div>
-            </div>
+            </FileIcon>
 
+            {/* TXT Dialog */}
             <Dialog
-                open={open}
-                onClose={this.handleToggle}
+                open={this.state.txtopen}
+                onClose={this.txtToggle}
                 PaperComponent={PaperComponent}
                 aria-labelledby="draggable-dialog-title"
             >
@@ -139,16 +140,17 @@ class MyFile extends Component {
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={this.handleToggle} color="primary" >
+                    <Button onClick={this.txtToggle} color="primary" >
                         Close
                     </Button>
                 </DialogActions>
             </Dialog>
 
+            {/* Email Snackbar */}
             <Snackbar 
                 anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
                 open = {this.state.snackbaropen}
-                onClose={this.snackbarClose}
+                onClose = {this.snackbarClose}
                 autoHideDuration={5000}
             >
                 <Alert style={{fontSize:"17px"}} onClose={this.snackbarClose} severity="success">
@@ -156,6 +158,7 @@ class MyFile extends Component {
                 </Alert>
             </Snackbar>
 
+            {/* JS Dialog */}
             <Dialog
                 open={this.state.jsopen}
                 onClose={this.jsToggle}
@@ -221,6 +224,7 @@ class MyFile extends Component {
                 </DialogActions>
             </Dialog>
 
+            {/* Folder Dialog */}
             <Dialog
                 open={this.state.folderopen}
                 onClose={this.folderToggle}

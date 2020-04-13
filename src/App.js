@@ -11,7 +11,7 @@ import MyFile from './components/MyFile';
 import MyTitle from './components/MyTitle';
 
 class App extends Component {
-  
+
   render() {
     return (
       <div className="App">

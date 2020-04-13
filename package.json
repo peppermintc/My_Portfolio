@@ -16,13 +16,16 @@
     "react-blink-text": "^1.0.3",
     "react-dom": "^16.13.1",
     "react-draggable": "^4.2.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "homepage": "https://peppermintc.github.io/My_Portfolio/",
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
