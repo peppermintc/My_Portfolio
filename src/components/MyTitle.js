@@ -7,7 +7,7 @@ const Title = styled.span`
   &:hover {
     transition: all .3s;
     color: rgb(246,195,88);
-    font-size: 56px;
+    
   } 
 `;
 
@@ -39,15 +39,19 @@ class MyFile extends Component {
   // Render
   render() {
     return (
-        <div className={this.state.bounce} style={{ cursor: 'Pointer', marginBottom:"60px", fontFamily: "'Source Sans Pro', sans-serif", fontSize: "60px"}}>
-            🍀 <span>
-                    <Title
-                        className={this.state.titleText}
-                        onClick={this.bounceSwitch}
-                    >
-                        WELCOME TO MY PORTFOLIO <span className={this.state.myClassName}>_</span>
-                    </Title>
-                </span>
+        <div className={this.state.bounce} style={{ cursor: 'Pointer', marginBottom:"60px", borderTop: "2px solid white", borderBottom: "2px solid white", paddingBottom: "10px", textAlign: "center"}}>
+            
+              <span>
+                <Title
+                    className={this.state.titleText}
+                    onMouseOver={this.bounceSwitch}
+                    onMouseOut={this.bounceSwitch}
+                >
+                    <span style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: "65px" }}>HAMIN PARK<br /></span>
+                    <span style={{fontSize: "30px"}}>portfolio <span className={this.state.myClassName}>_</span></span>
+                </Title>
+              </span>
+              {/* 🍀 */}
         </div>       
     );
   };

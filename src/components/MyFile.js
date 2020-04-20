@@ -97,6 +97,7 @@ class MyFile extends Component {
         dummy.value = textToCopy
         dummy.select();
         document.execCommand("copy");
+        document.body.removeChild(dummy);
 
         this.setState({snackbaropen: true});
     }
@@ -105,7 +106,7 @@ class MyFile extends Component {
   // Render
   render() {
     return (
-        <div>
+        <div style={{marginTop: "50px"}}>
             {/* File Appearance */}
             <FileIcon onClick={() => this.handleClick()}>
                 <img src={this.props.imgsrc} style={{ height: "96px", width: "96px", marginBottom: "7px", marginLeft: "auto", marginRight: "auto", display: "block" }} alt="jsicon"/>

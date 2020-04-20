@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 // Images
 import jsicon from './img/js2.png';
-import githubicon from './img/githubicon.png';
+import githubicon from './img/githubicon2.png';
 import emailicon from './img/email.png';
 import foldericon from './img/foldericon.png';
 import noteicon from './img/noteicon.png';
