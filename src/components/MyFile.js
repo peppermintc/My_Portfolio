@@ -238,6 +238,10 @@ class MyFile extends Component {
 
                 <DialogContent style={{ height: "350px", width: "550px" }}>
                     <FolderFile fileName={"My_Portfolio"} fileDate={"2020-04-12"} fileType={"React, Javascript, HTML/CSS"} fileSize={"2KB"} />    
+                    <FolderFile fileName={"Peppermint-Timer"} fileDate={"2020-12-23"} fileType={"HTML, CSS, Javascript, React"} fileSize={"3KB"} />    
+                    <FolderFile fileName={"Notice-Board"} fileDate={"2020-06-03"} fileType={"React, JQuery, Material UI.."} fileSize={"3KB"} />    
+                    <FolderFile fileName={"Volume-Power-Test"} fileDate={"2020-05-31"} fileType={"React, Javascript, HTML/CSS.."} fileSize={"4KB"} />    
+                    <FolderFile fileName={"Team-Manager"} fileDate={"2020-06-10"} fileType={"React, Javascript, HTML/CSS.."} fileSize={"5KB"} />    
                 </DialogContent>
 
                 <DialogActions>
