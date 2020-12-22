@@ -45,7 +45,7 @@ class FolderFile extends Component {
     } else if (this.props.fileName === "Team-Manager") {
       window.open("https://peppermintc.github.io/Team-Manager/", "_blank");
     } else if (this.props.fileName === "Peppermint-Timer") {
-      window.open("https://peppermintc.github.io/Peppermint-Timer/", "_blank");
+      window.open("https://peppermintc.github.io/peppermint-timer/", "_blank");
     }
   };
   // dialog ON/OFF function
