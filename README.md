@@ -1,6 +1,13 @@
-Live Version : https://peppermintc.github.io/My_Portfolio
+Personal Porfolio Web Page
+============ 
+### Tech Stack
+- HTML
+- CSS
+- Javascript
+- JQuery
+- ReactJS
+- Material UI
 
-Code run
-1. install nodejs
-2. npm update
-3. npm run start
+### Live Version 
+- https://peppermintc.github.io/My_Portfolio
+
