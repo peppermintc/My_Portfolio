@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
+// Components
+import MyFile from './components/MyFile';
+import MyTitle from './components/MyTitle';
 // Images
 import jsicon from './img/js2.png';
 import githubicon from './img/githubicon2.png';
 import emailicon from './img/email.png';
 import foldericon from './img/foldericon.png';
 import noteicon from './img/noteicon.png';
-// Components
-import MyFile from './components/MyFile';
-import MyTitle from './components/MyTitle';
 
-class App extends Component {
-
+export default class App extends Component {
   render() {
     return (
       <div className="App">
@@ -26,7 +25,4 @@ class App extends Component {
       </div>
     );
   };
-
 }
-
-export default App;

@@ -19,7 +19,6 @@ import smalljsonicon from '../img/smalljsonicon.png';
 // Components
 import FolderFile from './FolderFile';
 
-
 // Styled Component
 const FileIcon = styled.div`
     margin-right: 10px;
@@ -34,10 +33,6 @@ const FileIcon = styled.div`
     }
 `;
 
-// Material UI : Snackbar Message
-function Alert(props) {
-    return <MuiAlert variant="filled" {...props} />;
-}
 // Material UI : Dialog (Draggable)
 function PaperComponent(props) {
   return (
@@ -47,11 +42,10 @@ function PaperComponent(props) {
   );
 }
 
-// Component: <MyFile/>
 class MyFile extends Component {
   constructor(props) {
     super(props)
-    // States
+    
     this.state = {
         jsopen: false,
         folderopen: false,
@@ -61,7 +55,7 @@ class MyFile extends Component {
     }
   }
 
-  // Material UI ON/OFF Methods
+  // Toggle handler
   jsToggle = () => {
     this.setState({jsopen: !this.state.jsopen})
   }
@@ -126,17 +120,17 @@ class MyFile extends Component {
                 <DialogContent style={{height: "325px", width: "400px"}}>
                     <DialogContentText>
                         Web Development Skills
-                        <li>HTML / CSS</li>
-                        <li>Javascript</li>
-                        <li>React js</li>
-                        <li>Material UI</li>
-                        <li>Node js</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React.js</li>
+                        <li>Firebase</li>
+                        <li>Git</li>
                         <br />
                         Others
                         <li>Python</li>
                         <li>C</li>
                         <li>Java</li>
-                        <li>Github</li>
                         <li>Android Studio</li>
                     </DialogContentText>
                 </DialogContent>
@@ -154,9 +148,9 @@ class MyFile extends Component {
                 onClose = {this.snackbarClose}
                 autoHideDuration={5000}
             >
-                <Alert style={{fontSize:"17px"}} onClose={this.snackbarClose} severity="success">
+                <MuiAlert variant="filled" style={{fontSize:"17px"}} onClose={this.snackbarClose} severity="success">
                     {this.state.snackbarmsg}
-                </Alert>
+                </MuiAlert>
             </Snackbar>
 
             {/* JS Dialog */}
@@ -198,7 +192,7 @@ class MyFile extends Component {
                                     15<br />
                                 </td>
                                 <td style={{fontFamily: "'Source Code Pro', monospace"}}>
-                                    <span style={{color:"rgb(88,157,83)"}}>// LIFE IN CODE</span><br />
+                                    <span style={{color:"rgb(88,157,83)"}}>{'//'} LIFE IN CODE</span><br />
                                     <span style={{color:"rgb(198,128,161)"}}>import</span> <span style={{color:"rgb(134,217,237)"}}>*</span> <span style={{color:"rgb(198,128,161)"}}>from</span> <span style={{color:"rgb(212,122,84)"}}>Javascript</span><br />
                                     <span style={{color:"rgb(198,128,161)"}}>import</span> <span style={{color:"rgb(134,217,237)"}}>*</span> <span style={{color:"rgb(198,128,161)"}}>from</span> <span style={{color:"rgb(212,122,84)"}}>'React'</span><br />
                                     <span style={{color:"rgb(198,128,161)"}}>import</span> <span style={{color:"rgb(134,217,237)"}}>*</span> <span style={{color:"rgb(198,128,161)"}}>from</span> <span style={{color:"rgb(212,122,84)"}}>Bible;</span><br />
@@ -241,7 +235,8 @@ class MyFile extends Component {
                     <FolderFile fileName={"Peppermint-Timer"} fileDate={"2020-12-23"} fileType={"HTML, CSS, Javascript, React"} fileSize={"3KB"} />    
                     <FolderFile fileName={"Notice-Board"} fileDate={"2020-06-03"} fileType={"React, JQuery, Material UI.."} fileSize={"3KB"} />    
                     <FolderFile fileName={"Volume-Power-Test"} fileDate={"2020-05-31"} fileType={"React, Javascript, HTML/CSS.."} fileSize={"4KB"} />    
-                    <FolderFile fileName={"Team-Manager"} fileDate={"2020-06-10"} fileType={"React, Javascript, HTML/CSS.."} fileSize={"5KB"} />    
+                    <FolderFile fileName={"Team-Manager-Prototype"} fileDate={"2020-06-10"} fileType={"React, Javascript, HTML/CSS.."} fileSize={"5KB"} />    
+                    <FolderFile fileName={"Team-Manager-3"} fileDate={"2021-01-21"} fileType={"React, Firebase, Javascript.."} fileSize={"5KB"} />    
                 </DialogContent>
 
                 <DialogActions>
