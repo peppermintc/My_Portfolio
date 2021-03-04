@@ -10,6 +10,8 @@ import emailicon from './images/email.png';
 import foldericon from './images/foldericon.png';
 import noteicon from './images/noteicon.png';
 
+export const FilesContext = React.createContext();
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -42,10 +44,12 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Header />
-        <FileList files={this.state.files}/>
-      </div>
+      <FilesContext.Provider value={this.state.files} >
+        <div className="App">
+          <Header />
+          <FileList />
+        </div>
+      </FilesContext.Provider>
     );
   };
 }
