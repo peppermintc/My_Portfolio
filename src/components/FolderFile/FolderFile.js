@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-// Styled Component
 import styled from "styled-components";
-// Image
-import foldericon from "../img/foldericon.png";
+import foldericon from "../../images/foldericon.png";
 
 // Styled Component
-const File = styled.div`
+const Project = styled.div`
   margin-right: 10px;
   margin-left: 10px;
   padding: 6px;
@@ -37,7 +35,7 @@ export default class FolderFile extends Component {
 
   render() {
     return (
-      <File onClick={() => this.handleClick()}>
+      <Project onClick={() => this.handleClick()}>
         <div style={{ display: "inline-block", width: "170px" }}>
           <img
             src={foldericon}
@@ -67,7 +65,7 @@ export default class FolderFile extends Component {
         <span style={{ fontSize: "14px", color: "rgb(104,106,129)" }}>
           {this.props.fileSize}
         </span>
-      </File>
+      </Project>
     );
   }
 }

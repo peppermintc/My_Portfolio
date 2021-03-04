@@ -3,20 +3,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   padding-top: 9%;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-
-  /* background-color: #363636; */
   background-color: black;
-  
   animation: border 5s linear infinite;
   background-size: 100% 100%;
   background-position: 0 0;
-  /* border: 2.5vw solid rgb(32, 32, 32); */
   border: 2.5vw solid white;
 }

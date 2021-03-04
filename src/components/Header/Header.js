@@ -10,15 +10,12 @@ const Title = styled.span`
   } 
 `;
 
-// Component : <MyFile/>
-class MyFile extends Component {
+export default class Header extends Component {
   constructor(props) {
     super(props)
-    // States
+    
     this.state = {
-        myClassName: "blink",
         bounce: "",
-        titleText: ""
     }
   }
 
@@ -40,18 +37,16 @@ class MyFile extends Component {
       <div className={this.state.bounce} style={{ cursor: 'Pointer', marginBottom:"60px", borderTop: "2px solid white", borderBottom: "2px solid white", paddingBottom: "10px", textAlign: "center"}}>
         <span>
           <Title
-              className={this.state.titleText}
               onMouseOver={this.bounceSwitch}
               onMouseOut={this.bounceSwitch}
           >
               <span style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: "65px" }}>HAMIN PARK<br /></span>
-              <span style={{fontSize: "30px"}}>portfolio <span className={this.state.myClassName}>_</span></span>
+              <span style={{ fontSize: "30px" }}>portfolio <span>_</span></span>
           </Title>
         </span>
-        {/* 🍀 */}
       </div>       
     );
   };
 }
 
-export default MyFile;
+
