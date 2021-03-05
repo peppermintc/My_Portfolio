@@ -36,6 +36,7 @@ export default function Folder({ isFolderOpen, toggleFolder }) {
                 <FolderFile fileName={"Volume-Power-Test"} fileDate={"2020-05-31"} fileType={"React, Javascript, HTML/CSS.."} fileSize={"4KB"} />    
                 <FolderFile fileName={"Team-Manager-Prototype"} fileDate={"2020-06-10"} fileType={"React, Javascript, HTML/CSS.."} fileSize={"5KB"} />    
                 <FolderFile fileName={"Team-Manager-3"} fileDate={"2021-01-21"} fileType={"React, Firebase, Javascript.."} fileSize={"5KB"} />    
+                <FolderFile fileName={"Custom-Video-Player"} fileDate={"2021-02-25"} fileType={"React.js, hls.js.."} fileSize={"5KB"} />    
             </DialogContent>
 
             <DialogActions>

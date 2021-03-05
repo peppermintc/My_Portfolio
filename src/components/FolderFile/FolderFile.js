@@ -30,6 +30,8 @@ export default class FolderFile extends Component {
       window.open("https://peppermintc.github.io/peppermint-timer/", "_blank");
     } else if (this.props.fileName === "Team-Manager-3") {
       window.open("https://peppermintc.github.io/team-manager-3/", "_blank");
+    } else if (this.props.fileName === "Custom-Video-Player") {
+      window.open("https://peppermintc.github.io/custom-video-player/", "_blank");
     }
   };
 
